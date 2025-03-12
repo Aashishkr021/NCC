@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NCC Website</title>
     <link rel="stylesheet" href="ncc.css">
+    
+    <script src="https://kit.fontawesome.com/a6ca2ed8e0.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -37,45 +40,114 @@
         <div class="hero-text-box">
             <h2>About NCC</h2>
             <p>
-                The NCC is a vibrant youth organization, which has made a commendable contribution in producing responsible and patriotic citizens.
-                From a small beginning, today it has grown to the largest youth organization. NCC motivates and trains upcoming generations
-                to render their meaningful contribution towards national integration and development.
+                The NCC is a vibrant youth organization, which has made a commendable contribution in producing responsible and patriotic citizens. From a small beginning, today it has grown to the largest youth organization. NCC motivates and trains upcoming generations to render their meaningful contribution towards national integration and development.
             </p>
         </div>
     </section>
-    
-    
 
-    <section id="wings">
-        <div class="wing-box">
-            <div class="wing-container">
-                <img src="DALL·E 2025-03-10 18.57.32 - A realistic military tank, isolated on a simple background. The tank is detailed, featuring a large turret, tracks, and camouflage design. No addition.webp" alt="Army Wing" class="wing-img default">
-                <img src="2.jpg" alt="Army Wing Info" class="wing-img hover">
-                <a href="https://example.com/army" class="wing-text">Learn More About Army Wing</a>
+    <div class="container">
+        <div class="card" onclick="toggleCard(this)" id="od">
+            <h3>Organizational Details</h3>
+            <div class="card-content">
+                <p id="card_text">DG NCC: New Delhi under Ministry of Defence Govt of India<br>
+                    State NCC Directorate: HR.HP PB & CHD<br>
+                    NCC Group HQ: Ambala<br>
+                    NCC Battalion: Kurukshetra (Army), Karnal (Air Force), Faridabad (Navy)<br>
+                    Institute: National Institute of Technology, Kurukshetra (Haryana)
+                </p>
             </div>
         </div>
-        <div class="wing-box">
-            <div class="wing-container">
-                <img src="DALL·E 2025-03-10 19.01.48 - A realistic naval ship sailing through the ocean, with detailed textures and lighting, isolated on a simple background.webp" alt="Navy Wing" class="wing-img default">
-                <img src="1.jpg" alt="Navy Wing Info" class="wing-img hover">
-                <a href="https://example.com/navy" class="wing-text">Learn More About Navy Wing</a>
+    
+        <div class="card" onclick="toggleCard(this)" id="Camp">
+            <h3>NCC Camps</h3>
+            <div class="card-content">
+                <p id="card_text">It is compulsory for cadets to attend at least two NCC training camps, each lasting about 10 days in the 2nd and 3rd year. The camps expose cadets to a disciplined, regimental lifestyle and physical/mental challenges, enhancing personality development.</p>
             </div>
         </div>
-        <div class="wing-box">
-            <div class="wing-container">
-                <img src="DALL·E 2025-03-10 19.01.50 - A realistic fighter jet soaring through the sky with a clear background. The jet should be sleek, modern, and detailed, showcasing its aerodynamic des.webp" alt="Air Force Wing" class="wing-img default">
-                <img src="1000054475.jpg" alt="Air Force Wing Info" class="wing-img hover">
-                <a href="https://example.com/airforce" class="wing-text">Learn More About Air Force Wing</a>
+    
+        <div class="card" onclick="toggleCard(this)" id="more">
+            <h3>More About NCC</h3>
+            <div class="card-content">
+                <p id="card_text">Training areas include:<br>
+                    ● Drill<br>
+                    ● Map reading<br>
+                    ● Weapon training<br>
+                    ● Physical fitness<br>
+                    <br>
+                    Classroom lectures cover:<br>
+                    ● Field Craft<br>
+                    ● Battle craft<br>
+                    ● First Aid<br>
+                    <br>
+                    Social service activities include:<br>
+                    ● Anti-dowry awareness<br>
+                    ● Tree plantation<br>
+                    ● Disaster relief<br>
+                    ● Blood donation<br>
+                    ● AIDS awareness<br>
+                    ● Adult education<br>
+                    ● Pulse polio<br>
+                    ● Yoga
+                </p>
             </div>
         </div>
-    </section>
+    
+        <div class="card" onclick="toggleCard(this)" id="exam">
+            <h3>Exams</h3>
+            <div class="card-content">
+                <p id="card_text"><strong>Eligibility for 'B' Certificate Exam:</strong><br>
+                    ● 75% attendance in 1st-year parades<br>
+                    ● 75% attendance in 2nd-year parades<br>
+                    ● Must have attended one NCC training camp in the 2nd year<br>
+                    <br>
+                    <strong>Eligibility for 'C' Certificate Exam:</strong><br>
+                    ● Must have passed 'B' certificate exam<br>
+                    ● 75% attendance in 3rd-year parades<br>
+                    ● Must have attended one NCC Annual Training Camp (ATC) in the 3rd year<br>
+                    <br>
+                    NCC certificates ('B' & 'C') hold great value for career advancement.
+                </p>
+            </div>
+        </div>
+    
+        <div class="card" onclick="toggleCard(this)" id="fa">
+            <h3>Financial Assistance</h3>
+            <div class="card-content">
+                <p id="card_text">NCC provides financial assistance in the form of scholarships for meritorious and needy students. These scholarships are awarded by the DG NCC and other organizations to support cadets in their educational journey.</p>
+            </div>
+        </div>
+    </div>
+   
+      <div class="wings-section">
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="DALL·E 2025-03-10 18.57.32 - A realistic military tank, isolated on a simple background. The tank is detailed, featuring a large turret, tracks, and camouflage design. No addition.webp" alt="Army" class="default-img">
+                <img src="2.jpg" alt="Army" class="hover-img">
+            </div>
+            <a href="https://www.indianarmy.nic.in" target="_blank">Learn More</a>
+        </div>
 
-    <!-- HTML File -->
-<!-- HTML File -->
-<section id="gallery">
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="DALL·E 2025-03-10 19.01.48 - A realistic naval ship sailing through the ocean, with detailed textures and lighting, isolated on a simple background.webp" alt="Navy" class="default-img">
+                <img src="1.jpg" alt="Navy" class="hover-img">
+            </div>
+            <a href="https://www.indiannavy.nic.in" target="_blank">Learn More</a>
+        </div>
+
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="DALL·E 2025-03-10 19.01.50 - A realistic fighter jet soaring through the sky with a clear background. The jet should be sleek, modern, and detailed, showcasing its aerodynamic des.webp" alt="Air Force" class="default-img">
+                <img src="1000054481.jpg" alt="Air Force" class="hover-img">
+            </div>
+            <a href="https://indianairforce.nic.in" target="_blank">Learn More</a>
+        </div>
+    </div>
+
+
+    <section id="gallery">
     <div class="gallery-container">
         <h2 id="g">Gallery</h2>
-        <p id="g">Glimpses of the Indian Armed Forces</p>
         <div class="gallery-layout">
             <div class="gallery-box left-box" id="parade">
                 <h3>Parade</h3>
@@ -104,8 +176,29 @@
     </div>
 </section>
 
-    <footer>
-        <p>&copy; 2025 NCC NIT Kurukshetra. All rights reserved.</p>
-    </footer>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="ncc logo.png" alt="NCC Logo"> 
+        </div>
+        <div class="footer-info">
+            <h3>Address</h3>
+            <p>NIT Kurukshetra, Thanesar, Haryana</p>
+            <p><i class="fas fa-envelope"></i> ncc@nitkkr.ac.in</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright ©2025. All rights reserved </p>
+    </div>
+</footer>
+<script src="ncc.js"></script>
+
+
 </body>
 </html>
