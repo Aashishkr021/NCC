@@ -45,78 +45,119 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="card" onclick="toggleCard(this)" id="od">
-            <h3>Organizational Details</h3>
-            <div class="card-content">
-                <p id="card_text">DG NCC: New Delhi under Ministry of Defence Govt of India<br>
-                    State NCC Directorate: HR.HP PB & CHD<br>
-                    NCC Group HQ: Ambala<br>
-                    NCC Battalion: Kurukshetra (Army), Karnal (Air Force), Faridabad (Navy)<br>
-                    Institute: National Institute of Technology, Kurukshetra (Haryana)
-                </p>
-            </div>
-        </div>
+    <section class="ncc-info-section">
+        <div class="info-container">
+            <div class="info-grid">
+                <div class="info-card organizational-details">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h2>Organizational Details</h2>
+                    <ul>
+                        <li>
+                            <span class="label">Headquarters:</span>
+                            <span class="detail">DG NCC, New Delhi</span>
+                        </li>
+                        <li>
+                            <span class="label">Ministry:</span>
+                            <span class="detail">Defence, Govt of India</span>
+                        </li>
+                        <li>
+                            <span class="label">State Directorate:</span>
+                            <span class="detail">HR.HP PB & CHD</span>
+                        </li>
+                        <li>
+                            <span class="label">Group HQ:</span>
+                            <span class="detail">Ambala</span>
+                        </li>
+                        <li>
+                            <span class="label">Battalions:</span>
+                            <span class="detail">
+                                Army (Kurukshetra)<br>
+                                Air Force (Karnal)<br>
+                                Navy (Faridabad)
+                            </span>
+                        </li>
+                    </ul>
+                </div>
     
-        <div class="card" onclick="toggleCard(this)" id="Camp">
-            <h3>NCC Camps</h3>
-            <div class="card-content">
-                <p id="card_text">It is compulsory for cadets to attend at least two NCC training camps, each lasting about 10 days in the 2nd and 3rd year. The camps expose cadets to a disciplined, regimental lifestyle and physical/mental challenges, enhancing personality development.</p>
+                <div class="info-card ncc-camps">
+                    <div class="card-icon">
+                        <i class="fas fa-campground"></i>
+                    </div>
+                    <h2>NCC Camps</h2>
+                    <div class="camp-details">
+                        <p>Cadets are required to participate in two intensive training camps:</p>
+                        <div class="camp-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-calendar"></i>
+                                <span>Duration: 10 days each</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-clock"></i>
+                                <span>Years: 2nd and 3rd</span>
+                            </div>
+                        </div>
+                        <p class="camp-description">
+                            These camps immerse cadets in a disciplined, regimental lifestyle, challenging them physically and mentally to foster comprehensive personal development.
+                        </p>
+                    </div>
+                </div>
+                <div class="info-card training-and-activities">
+                    <div class="card-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h2>Others</h2>
+                    <div class="training-details">
+                        <h3>Training Areas</h3>
+                        <ul>
+                            <li>
+                                <span class="label">Physical Training:</span>
+                                <span class="detail">
+                                    • Drill
+                                    • Physical Fitness
+                                    • Weapon Training
+                                    • Map Reading
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <h3>Classroom Lectures</h3>
+                        <ul>
+                            <li>
+                                <span class="label">Expert Topics:</span>
+                                <span class="detail">
+                                    • Field Craft
+                                    • Battle Craft
+                                    • First Aid
+                                </span>
+                            </li>
+                        </ul>
+                
+                        <h3>Social Activities</h3>
+                        <ul>
+                            <li>
+                                <span class="label">Community Engagement:</span>
+                                <span class="detail">
+                                    • Tree Plantation
+                                    • Blood Donation
+                                    • Disaster Relief
+                                    • AIDS Awareness
+                                    • Adult Education
+                                    • Pulse Polio
+                                    • Anti-Dowry Awareness
+                                    • Yoga
+                                </span>
+                            </li>
+                        </ul>
+                
+                        
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
     
-        <div class="card" onclick="toggleCard(this)" id="more">
-            <h3>More About NCC</h3>
-            <div class="card-content">
-                <p id="card_text">Training areas include:<br>
-                    ● Drill<br>
-                    ● Map reading<br>
-                    ● Weapon training<br>
-                    ● Physical fitness<br>
-                    <br>
-                    Classroom lectures cover:<br>
-                    ● Field Craft<br>
-                    ● Battle craft<br>
-                    ● First Aid<br>
-                    <br>
-                    Social service activities include:<br>
-                    ● Anti-dowry awareness<br>
-                    ● Tree plantation<br>
-                    ● Disaster relief<br>
-                    ● Blood donation<br>
-                    ● AIDS awareness<br>
-                    ● Adult education<br>
-                    ● Pulse polio<br>
-                    ● Yoga
-                </p>
-            </div>
-        </div>
-    
-        <div class="card" onclick="toggleCard(this)" id="exam">
-            <h3>Exams</h3>
-            <div class="card-content">
-                <p id="card_text"><strong>Eligibility for 'B' Certificate Exam:</strong><br>
-                    ● 75% attendance in 1st-year parades<br>
-                    ● 75% attendance in 2nd-year parades<br>
-                    ● Must have attended one NCC training camp in the 2nd year<br>
-                    <br>
-                    <strong>Eligibility for 'C' Certificate Exam:</strong><br>
-                    ● Must have passed 'B' certificate exam<br>
-                    ● 75% attendance in 3rd-year parades<br>
-                    ● Must have attended one NCC Annual Training Camp (ATC) in the 3rd year<br>
-                    <br>
-                    NCC certificates ('B' & 'C') hold great value for career advancement.
-                </p>
-            </div>
-        </div>
-    
-        <div class="card" onclick="toggleCard(this)" id="fa">
-            <h3>Financial Assistance</h3>
-            <div class="card-content">
-                <p id="card_text">NCC provides financial assistance in the form of scholarships for meritorious and needy students. These scholarships are awarded by the DG NCC and other organizations to support cadets in their educational journey.</p>
-            </div>
-        </div>
-    </div>
    
       <div class="wings-section">
         <div class="wing-box">
