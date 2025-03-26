@@ -1,22 +1,118 @@
-body {
-    background: linear-gradient(to bottom right, #f5e1c6, #e6c7a1); /* Gradient background */
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    /* Color Palette */
+    --primary-maroon: #800000;
+    --secondary-maroon: #600000;
+    --accent-gold: #FFD700;
+    --background-light: #f5e1c6;
+    --background-dark: #e6c7a1;
+    --text-primary: #333;
+    --text-secondary: #ffffff;
+    
+    /* Typography */
+    --font-primary: 'Poppins', Arial, sans-serif;
+    --font-secondary: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
 }
 
-
-
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f0f4f8, #e0e8f0);
+    color: var(--text-primary);
+    font-size: clamp(16px, 1vw + 1rem, 22px);
+}
+
+/* Responsive Typography */
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 h2 {
-    color: white;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    color: var(--text-secondary);
+}
+
+
+/* Button Base Styles */
+button, .btn, .gallery-link {
+    padding: 6px 10px; /* Reduced padding */
+    font-size: 14px; /* Smaller font size */
+    min-width: auto; /* Remove minimum width */
+    max-width: 200px; /* Add a max-width to prevent overly long buttons */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Gallery Link Specific Adjustments */
+.gallery-link {
+    padding: 5px 8px; /* Even more compact */
+    font-size: 13px;
+}
+
+/* Responsive Button Adjustments */
+@media (max-width: 768px) {
+    button, .btn, .gallery-link {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Hover and Focus States */
+button:hover, .btn:hover, .gallery-link:hover {
+    transform: scale(0.98); /* Slight shrink on hover */
+}
+
+/* Improved Navigation */
+.nav-bar {
+    background-color: var(--secondary-maroon);
+    padding: 0.5rem 0;
+    transition: background-color 0.3s ease;
+}
+
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.3rem 0.6rem; /* Add compact padding */
+    font-size: 0.9rem; /* Slightly smaller font */
+    border-radius: 4px; /* Optional: add slight rounded corners */
+
+}
+
+.nav-bar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-bar ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -61,9 +157,9 @@ header {
 
 
 
-/* Navigation Bar */
+/* Navigation Bar 
 .nav-bar {
-    background-color: #600000; /* Slightly darker maroon */
+    background-color: #600000;  Slightly darker maroon 
     padding: 10px 0;
 }
 
@@ -88,6 +184,7 @@ header {
 .nav-bar ul li a:hover {
     color: #FFD700;
 }
+*/
 
 
 
@@ -117,7 +214,7 @@ header {
 /* Foreground Image (Above Text) */
 .hero-foreground {
     position: absolute;
-    top: 20%;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
@@ -152,48 +249,164 @@ header {
     }
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-bar ul li a {
+        padding: 0.2rem 0.5rem; /* More compact on mobile */
+        font-size: 0.8rem;
+    }
+
+    .wings-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wing-box {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+}
 
 
 
+.ncc-info-section {
+    background: linear-gradient(135deg, #f0f4f8, #e0e8f0);
+    padding: 4rem 2rem;
+}
 
-/*MORE INFO SECTION*/
-.container {
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.ncc-info-section .info-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ncc-info-section .info-grid {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    gap: 20px;
 }
 
-.card {
-    background-color: #fff;
-    padding: 20px;
+.ncc-info-section .info-card {
+    flex: 1;
+    min-width: 0; /* Ensures flex items can shrink below their content size */
+}
+
+/* Optional: Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .ncc-info-section .info-grid {
+        flex-direction: column;
+    }
+}
+
+.info-card {
+    background: white;
     border-radius: 15px;
-    width: 300px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
     text-align: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    overflow: hidden;  /* Hide text initially */
-    max-height: 60px; /* Default height (adjust as needed) */
+    font-size: 3rem;
+    color: #800000;
+    margin-bottom: 1rem;
 }
 
-.card-content {
-    display: none; /* Hide content initially */
-    padding-top: 10px;
+.info-card h2 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #800000;
+    padding-bottom: 0.5rem;
 }
 
-.card.expanded {
-    max-height: 500px; /* Expand card */
+.info-card ul {
+    list-style-type: none;
 }
 
-.card.expanded .card-content {
-    display: block; /* Show content */
+.info-card li {
+    background-color:#cacaca;/*Classic khaki color */
+    color: #4A3C2A; /* Dark brown text for contrast */
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
-#card_text{
-    color: black;
+
+.info-card li .label {
+    color: #6B4423; /* Deep brown for label */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.info-card li .detail {
+    color: #2C1810; /* Very dark brown for detail text */
+}
+
+
+.label {
+    font-weight: bold;
+    color: #600000;
+    margin-right: 0.5rem;
+    min-width: 120px;
+}
+
+.detail {
+    color: #333;
+}
+
+.camp-highlights {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    background-color: #cacaca;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.highlight {
+    display: flex;
+    align-items: center;
+}
+
+.highlight i {
+    margin-right: 0.5rem;
+    color: #800000;
+}
+
+.camp-description {
+    text: ;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /*  #more{
@@ -328,18 +541,16 @@ a:hover {
     margin: 20px 0;
 }
 
+/* Advanced Hover Effects */
 .gallery-box {
-    background: rgba(19, 0, 124, 0.9);
-    padding: 15px;
-    border-radius: 8px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    border-radius:  10px; ;
+    background-color: #600000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .gallery-box:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-box h3 {
@@ -443,15 +654,46 @@ section {
 
 
 
+/* Accessibility Improvements */
+a, button {
+    transition: all 0.3s ease;
+    outline-offset: 3px;
+}
+
+a:focus, button:focus {
+    outline: 2px solid var(--accent-gold);
+}
+
+/* Performance Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+img:hover {
+    opacity: 0.9;
+}
+
+
+
 
 
 /* Footer Styling */
+/* Footer Enhancements */
 .footer {
-    background-color: maroon; /* Maroon Background */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-family: Arial, sans-serif;
+    background-color: var(--primary-maroon);
+    color: var(--text-secondary);
+    padding: 2rem 0;
+}
+
+.footer-social a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: var(--accent-gold);
 }
 
 .footer-container {
