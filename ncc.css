@@ -18,16 +18,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: var(--font-primary);
+    background: linear-gradient(to bottom right, #a7d3fe, #93c5f6); /* Gradient background */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background: linear-gradient(135deg, #f0f4f8, #e0e8f0);
     color: var(--text-primary);
     font-size: clamp(16px, 1vw + 1rem, 22px);
 }
 
+h2 {
+    color: white;
+}
 /* Responsive Typography */
 h1 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
@@ -35,7 +41,7 @@ h1 {
 
 h2 {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
-    color: var(--text-secondary);
+    
 }
 
 
@@ -71,61 +77,12 @@ button:hover, .btn:hover, .gallery-link:hover {
 }
 
 /* Improved Navigation */
-.nav-bar {
-    background-color: var(--secondary-maroon);
-    padding: 0.5rem 0;
-    transition: background-color 0.3s ease;
-}
-
-.nav-bar ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    list-style: none;
-}
-
-.nav-bar ul li a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s ease;
-    padding: 0.3rem 0.6rem; /* Add compact padding */
-    font-size: 0.9rem; /* Slightly smaller font */
-    border-radius: 4px; /* Optional: add slight rounded corners */
-
-}
-
-.nav-bar ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--accent-gold);
-    transition: width 0.3s ease;
-}
-
-.nav-bar ul li a:hover {
-    color: var(--accent-gold);
-}
-
-.nav-bar ul li a:hover::after {
-    width: 100%;
-}
-
-
-
-
-/* Header Section */
 header {
     background-color: #800000;
     color: white;
     width: 100%;
     text-align: center;
 }
-
 
 /* Top Bar */
 .top-bar {
@@ -152,6 +109,53 @@ header {
     font-weight: bolder;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Navigation Bar */
+.nav-bar {
+    background-color: #600000; /* Slightly darker maroon */
+    padding: 10px 0;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-bar ul li {
+    display: inline;
+}
+
+.nav-bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-bar ul li a:hover {
+    color: #FFD700;
+}
+
+/* Responsive Design for Navigation */
+@media screen and (max-width: 768px) {
+    .nav-bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav-bar ul li a {
+        padding: 0.2rem 0.5rem; /* More compact on mobile */
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
 
 
 
@@ -276,7 +280,7 @@ header {
 
 
 .ncc-info-section {
-    background: linear-gradient(135deg, #f0f4f8, #e0e8f0);
+    background: linear-gradient(135deg, #f0f4f8, hsl(210, 35%, 91%));
     padding: 4rem 2rem;
 }
 
@@ -694,6 +698,55 @@ img:hover {
 .footer-social a:hover {
     transform: scale(1.2);
     color: var(--accent-gold);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Logo */
+.footer-logo img {
+    width: 100px; /* Adjust size */
+}
+
+/* Address Section */
+.footer-info {
+    text-align: center;
+}
+
+.footer-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Social Icons */
+.footer-social a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: lightgray;
+}
+
+/*  Footer Styling */
+.footer {
+    background-color: maroon; /* Maroon Background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
 }
 
 .footer-container {
